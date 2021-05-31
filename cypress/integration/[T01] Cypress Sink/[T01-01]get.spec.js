@@ -1,35 +1,44 @@
+// Imports
+import MethodsPage from "../../support/Pages/allMethodsList.js";
+import QueryingPage from "../../support/Pages/QueryingPage.js";
+
+import {
+  checkVisiblity,
+  checkAmountOfElements,
+  checkInnerText,
+} from "../../support/Utils/assertions.js";
+
+// Initialization
+const methodsPage = new MethodsPage();
+const queryingPage = new QueryingPage();
+
 context("Checking GET method page", () => {
   beforeEach(() => {
-    cy.visit("https://example.cypress.io/");
+    methodsPage.visit();
 
-    cy.location().then((location) => {
-      expect(location.href).to.eq("https://example.cypress.io/");
-    });
+    methodsPage.checkURL();
 
-    cy.contains("a", "get")
+    methodsPage
+      .selectGetMethodLink()
       .then((getbtn) => {
-        expect(getbtn).to.have.lengthOf(1);
-        expect(getbtn).to.be.visible;
+        checkAmountOfElements(getbtn, 1);
+        checkVisiblity(getbtn);
       })
       .click();
 
-    cy.location().then((location) => {
-      expect(location.href).to.eq(
-        "https://example.cypress.io/commands/querying"
-      );
-    });
+    queryingPage.checkURL();
 
-    cy.contains("h4", "cy.get()").then((header) => {
-      expect(header).to.have.lengthOf(1);
-      expect(header).to.be.visible;
+    queryingPage.selectGetMethodHeader().then((header) => {
+      checkAmountOfElements(header, 1);
+      checkVisiblity(header);
     });
   });
 
   it("Sample GET button is visible", () => {
-    cy.get("#query-btn").then((button) => {
-      expect(button).to.have.lengthOf(1);
-      expect(button).to.be.visible;
-      expect(button).to.contain("Button");
+    queryingPage.selectSampleButton().then((button) => {
+      checkAmountOfElements(button, 1);
+      checkVisiblity(button);
+      checkInnerText(button, "Button");
     });
   });
 });
