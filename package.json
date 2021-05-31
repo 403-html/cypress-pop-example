@@ -5,6 +5,7 @@
   "repository": "https://github.com/403-html/cypress-pop-example.git",
   "author": "WojciechGrygoHTD, htd-tstepien",
   "dependencies": {
-    "cypress": "^7.4.0"
+    "cypress": "^7.4.0",
+    "lodash": "^4.17.21"
   }
 }
