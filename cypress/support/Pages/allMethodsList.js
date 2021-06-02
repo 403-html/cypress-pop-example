@@ -15,8 +15,15 @@ class MethodsPage {
 
   selectGetMethodLink() {
     return cy.contains(
-      methodsPageLocators.link.tag,
-      methodsPageLocators.link.locator
+      methodsPageLocators.getMethod.tag,
+      methodsPageLocators.getMethod.locator
+    );
+  }
+
+  selectTypeMethodLink() {
+    return cy.contains(
+      methodsPageLocators.typeMethod.tag,
+      methodsPageLocators.typeMethod.locator
     );
   }
 }
