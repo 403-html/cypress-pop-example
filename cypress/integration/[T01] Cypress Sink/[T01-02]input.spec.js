@@ -1,5 +1,4 @@
 // Imports
-import { describe } from "mocha";
 import MethodsPage from "../../support/Pages/allMethodsList.js";
 import TypePage from "../../support/Pages/typePage.js";
 
