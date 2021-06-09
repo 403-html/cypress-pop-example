@@ -12,7 +12,7 @@ import {
 const methodsPage = new MethodsPage();
 const queryingPage = new QueryingPage();
 
-context("Checking GET method page", () => {
+describe("Checking GET method page", () => {
   beforeEach(() => {
     methodsPage.visit();
 

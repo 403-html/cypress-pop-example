@@ -1,4 +1,5 @@
 // Imports
+import { describe } from "mocha";
 import MethodsPage from "../../support/Pages/allMethodsList.js";
 import TypePage from "../../support/Pages/typePage.js";
 
@@ -12,7 +13,7 @@ import {
 const methodsPage = new MethodsPage();
 const typePage = new TypePage();
 
-context("Checking fixture method", () => {
+describe("Checking fixture method", () => {
   beforeEach(() => {
     methodsPage.visit();
 

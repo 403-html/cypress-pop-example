@@ -3,26 +3,20 @@ import { checkCurrentURL } from "../Utils/assertions";
 import { typePageLocators } from "../locators";
 
 class TypePage {
-  visit() {
-    return cy.visit(typePageLocators.url);
-  }
+  visit = () => cy.visit(typePageLocators.url);
 
-  checkURL() {
-    return cy
+  checkURL = () =>
+    cy
       .location()
       .then((location) => checkCurrentURL(location, typePageLocators.url));
-  }
 
-  selectTypeMethodHeader() {
-    return cy.contains(
+  selectTypeMethodHeader = () =>
+    cy.contains(
       typePageLocators.typeHeader.tag,
       typePageLocators.typeHeader.locator
     );
-  }
 
-  selectSampleInput() {
-    return cy.get(typePageLocators.sampleInput);
-  }
+  selectSampleInput = () => cy.get(typePageLocators.sampleInput);
 }
 
 export default TypePage;
