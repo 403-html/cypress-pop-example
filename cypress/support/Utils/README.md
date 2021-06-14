@@ -11,23 +11,23 @@ Contains all assertions we are using in tests in project.
   - returns a response to the Cypress API as to whether the item is visible or not.
   - `elem` - `object`, element we want check, should be passed element we get by `cy.get()`/`cy.contains()`.
   - `shouldBe` - `boolean`, defines to check whether the element is visible (`true`) or not (`false`). The default value is `true`.
-  - Example: `cy.get("#elem").then(elem => checkVisibility(elem, false))`
+  - Example: `cy.get("#elem").should(elem => checkVisibility(elem, false))`
 - `checkAmountOfElements(elem, num)`
   - returns a response to the Cypress API as to whether the number of elements in the DOM is as defined in the second argument.
   - `elem` - `object`, element we want check, should be passed element we get by `cy.get()`/`cy.contains()`.
   - `num` - `number`, defines how many elements should be in the DOM. The default value is `1`.
-  - Example: `cy.get("#elem").then(elem => checkAmountOfElements(elem, 4))`
+  - Example: `cy.get("#elem").should(elem => checkAmountOfElements(elem, 4))`
 - `checkCurrentURL(location, url)`
   - returns a response to the Cypress API as to whether the URL we are at is matching URL we want to be.
   - `location` - `object`, current location we are in, should be passed after using `cy.location()`.
   - `url` - `string`, defines the URL where we should be. The default value is `undefined`.
-  - Example: `cy.location().then(location => checkCurrentURL(location, "https://google.com/"))`
+  - Example: `cy.location().should(location => checkCurrentURL(location, "https://google.com/"))`
 - `checkInnerText(elem, text)`
 
   - returns a response to the Cypress API as to whether the text in element is present or not.
   - `elem` - `object`, element we want check, should be passed element we get by `cy.get()`/`cy.contains()`.
   - `text` - `string`, defines text which should be in given element. The default value is `undefined`.
-  - Example: `cy.get("#elem").then(elem => checkInnerText(elem, "Lorem ipsum"))`
+  - Example: `cy.get("#elem").should(elem => checkInnerText(elem, "Lorem ipsum"))`
 
   ## localStorage.js
 
