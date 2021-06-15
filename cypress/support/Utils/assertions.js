@@ -14,9 +14,14 @@ const checkInnerText = (elem, text) => {
   expect(elem).to.contain(text);
 };
 
+const checkIfValue = (elem, text) => {
+  expect(elem).to.have.value(text);
+};
+
 export default {
   checkVisiblity,
   checkAmountOfElements,
   checkCurrentURL,
   checkInnerText,
+  checkIfValue,
 };

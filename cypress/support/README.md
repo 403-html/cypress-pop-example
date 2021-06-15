@@ -10,6 +10,7 @@ Here we have web pages made as objects which we can use directly in tests.
 
 - `allMethodsList.js` - for main methods list page in Cypress Sink page
 - `QueryingPage.js` - for querying page in Cypress Sink page
+- `ActionsPage.js` - for actions page in Cypress Sink page
 
 [More details](Pages/README.md)
 
