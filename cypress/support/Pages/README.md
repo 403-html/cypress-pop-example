@@ -2,7 +2,7 @@
 
 - [allMethodsList.js](#allMethodsList.js)
 - [QueryingPage.js](#queryingPage.js)
-- [typePage.js](#typePage.js)
+- [ActionsPage.js](#actionsPage.js)
 
 ## allMethodsList.js
 
@@ -37,7 +37,7 @@ queryingPage.visit();
 - `selectGetMethodHeader()` - select header of that `get()` method
 - `selectSampleButton()` - select dummy button in `get()` method
 
-## typePage.js
+## ActionsPage.js
 
 Class of Cypress Sink page about actions methods (like `cy.type()`).
 
