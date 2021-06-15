@@ -10,7 +10,7 @@ const queryingPageLocators = {
   sampleButton: "#query-btn",
 };
 
-const typePageLocators = {
+const actionsPageLocators = {
   url: "https://example.cypress.io/commands/actions",
   typeHeader: { tag: "h4", locator: ".type()" },
   sampleInput: "#email1",

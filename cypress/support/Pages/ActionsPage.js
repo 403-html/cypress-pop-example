@@ -1,22 +1,22 @@
 import { checkCurrentURL } from "../Utils/assertions";
 
-import { typePageLocators } from "../locators";
+import { actionsPageLocators } from "../locators";
 
 class ActionsPage {
-  visit = () => cy.visit(typePageLocators.url);
+  visit = () => cy.visit(actionsPageLocators.url);
 
   checkURL = () =>
     cy
       .location()
-      .then((location) => checkCurrentURL(location, typePageLocators.url));
+      .then((location) => checkCurrentURL(location, actionsPageLocators.url));
 
   selectTypeMethodHeader = () =>
     cy.contains(
-      typePageLocators.typeHeader.tag,
-      typePageLocators.typeHeader.locator
+      actionsPageLocators.typeHeader.tag,
+      actionsPageLocators.typeHeader.locator
     );
 
-  selectSampleInput = () => cy.get(typePageLocators.sampleInput);
+  selectSampleInput = () => cy.get(actionsPageLocators.sampleInput);
 }
 
 export default ActionsPage;
