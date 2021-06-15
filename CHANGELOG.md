@@ -3,6 +3,8 @@
 ## 1.1.0
 
 - Added example fixture usage with typing it
+- Updated page classes to use arrow functions
+- Updated main tests hooks from `context` to `describe`
 
 ## 1.0.0
 
