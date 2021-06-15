@@ -2,6 +2,7 @@
 
 - [allMethodsList.js](#allMethodsList.js)
 - [QueryingPage.js](#queryingPage.js)
+- [typePage.js](#typePage.js)
 
 ## allMethodsList.js
 
@@ -33,5 +34,22 @@ queryingPage.visit();
 
 - `visit()` - visit page `https://example.cypress.io/commands/querying`
 - `checkURL()` - check if current URL is `https://example.cypress.io/commands/querying`
-- `selectGetMethodHeader()` - select header of that `get()` page
-- `selectSampleButton()` - select dummy button in `get()` page
+- `selectGetMethodHeader()` - select header of that `get()` method
+- `selectSampleButton()` - select dummy button in `get()` method
+
+## typePage.js
+
+Class of Cypress Sink page about actions methods (like `cy.type()`).
+
+Sample import and use:
+
+```javascript
+import ActionsPage from "../../support/Pages/ActionsPage.js";
+const actionsPage = new ActionsPage();
+actionsPage.visit();
+```
+
+- `visit()` - visit page `https://example.cypress.io/commands/actions`
+- `checkURL()` - check if current URL is `https://example.cypress.io/commands/actions`
+- `selectTypeMethodHeader()` - select header of that `type()` method
+- `selectSampleInput()` - select dummy input in `type()` method
