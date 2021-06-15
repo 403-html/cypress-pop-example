@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.0
+
+- Added example fixture usage with typing it
+
 ## 1.0.0
 
 - Added documentation of the project
