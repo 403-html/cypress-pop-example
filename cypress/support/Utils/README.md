@@ -1,7 +1,7 @@
 # Utils
 
-- [assertions](##assertions.js)
-- [local storage](##localStorage.js)
+- [assertions](#assertions.js)
+- [local storage](#localStorage.js)
 
 ## assertions.js
 

@@ -1,7 +1,7 @@
 # Pages
 
-- [allMethodsList.js](##allMethodsList.js)
-- [QueryingPage.js](##QueryingPage.js)
+- [allMethodsList.js](#allMethodsList.js)
+- [QueryingPage.js](#queryingPage.js)
 
 ## allMethodsList.js
 

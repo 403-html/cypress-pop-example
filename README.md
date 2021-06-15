@@ -2,10 +2,10 @@
 
 ## Table of contents
 
-- [What is it about?](##What-is-it-about)
-- [Project launch](##Project-launch)
-- [Shortcuts](##Shortcuts)
-- [Project files structure](##Project-files-structure)
+- [What is it about?](#what-is-it-about)
+- [Project launch](#project-launch)
+- [Shortcuts](#shortcuts)
+- [Project files structure](#project-files-structure)
 
 ## What is it about?
 
