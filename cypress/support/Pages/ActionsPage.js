@@ -2,7 +2,7 @@ import { checkCurrentURL } from "../Utils/assertions";
 
 import { typePageLocators } from "../locators";
 
-class TypePage {
+class ActionsPage {
   visit = () => cy.visit(typePageLocators.url);
 
   checkURL = () =>
@@ -19,4 +19,4 @@ class TypePage {
   selectSampleInput = () => cy.get(typePageLocators.sampleInput);
 }
 
-export default TypePage;
+export default ActionsPage;
