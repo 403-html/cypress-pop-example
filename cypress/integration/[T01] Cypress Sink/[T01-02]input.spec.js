@@ -1,6 +1,6 @@
 // Imports
 import MethodsPage from "../../support/Pages/allMethodsList.js";
-import TypePage from "../../support/Pages/typePage.js";
+import ActionsPage from "../../support/Pages/ActionsPage.js";
 
 import {
   checkVisiblity,
@@ -10,7 +10,7 @@ import {
 
 // Initialization
 const methodsPage = new MethodsPage();
-const typePage = new TypePage();
+const actionsPage = new ActionsPage();
 
 describe("Checking fixture method", () => {
   beforeEach(() => {
@@ -26,9 +26,9 @@ describe("Checking fixture method", () => {
       })
       .click();
 
-    typePage.checkURL();
+    actionsPage.checkURL();
 
-    typePage.selectTypeMethodHeader().then((header) => {
+    actionsPage.selectTypeMethodHeader().then((header) => {
       checkAmountOfElements(header, 1);
       checkVisiblity(header);
     });
@@ -36,7 +36,7 @@ describe("Checking fixture method", () => {
 
   it("Sample input type", () => {
     cy.fixture("example.json").then(({ email }) => {
-      typePage
+      actionsPage
         .selectSampleInput()
         .then((input) => {
           checkAmountOfElements(input, 1);
