@@ -1,7 +1,7 @@
 Cypress.Commands.add(
   "updateFixtureProperty",
-  (fixturePath, propName, newContent) => {
-    const properFixturePath = `./cypress/fixtures/${fixturePath}`;
+  (fixtureName, propName, newContent) => {
+    const properFixturePath = `./cypress/fixtures/${fixtureName}`;
 
     cy.readFile(properFixturePath).then((fixture) => {
       let editedObj = fixture;
