@@ -1,6 +1,5 @@
 # CHANGELOG
 
-
 ## 1.2.0
 
 - Added method to updating fixture files.
