@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.1
+
+- Fix linking in two README.md
+
 ## 1.1.0
 
 - Added example fixture usage with typing it
