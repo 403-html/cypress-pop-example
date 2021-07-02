@@ -19,5 +19,5 @@ const actionsPageLocators = {
 export default {
   methodsPageLocators,
   queryingPageLocators,
-  typePageLocators,
+  actionsPageLocators,
 };
