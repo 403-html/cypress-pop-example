@@ -106,3 +106,7 @@ dist
 # Cypress
 cypress/screenshots/
 cypress/videos/
+
+# Mochawesome-report
+mochawesome-report/
+cypress-combined-report.json
