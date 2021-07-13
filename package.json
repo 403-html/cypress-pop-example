@@ -9,7 +9,7 @@
     "merge:reports": "mochawesome-merge mochawesome-report/*.json -o cypress-combined-report.json"
   },
   "dependencies": {
-    "cypress": "^7.6.0",
+    "cypress": "^7.7.0",
     "lodash": "^4.17.21",
     "mocha": "^9.0.2",
     "mochawesome": "^6.2.2",
