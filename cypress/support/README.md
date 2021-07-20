@@ -18,5 +18,6 @@ Here we have web pages made as objects which we can use directly in tests.
 
 - `assertions.js` - methods for transferring elements and verifying that they meet the requirements of the criteria
 - `localStorage.js` - methods for extending localStorage management capabilities
-
+- `updateFixture.spec.js` - methods for adding management of fixtures in tests
+- 
 [More details](Utils/README.md)
