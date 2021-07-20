@@ -48,3 +48,21 @@ Contains all assertions we are using in tests in project.
 
 - `cy.saveLocalStorage()` - saves the current localStorage elements to an array in Cypress so that they can be used between test files
 - `cy.restoreLocalStorage()` - restore localStorage from an array in Cypress to the current browser session
+
+  ## fixturesExtension.js
+- `cy.updateFixtureProperty(fixtureName, propName, newContent)`
+  - updates the value of the property in the given fixture to the given new content, **doesn't look for nested properties** 
+  - `fixturName` - `string`, defines which fixture should be updated
+  - `propName` - `string`, defines which property value should be changed
+  - `newContent` - `any`, defines a new value for the given property
+  - Example
+
+  ```js
+  // fixture.json
+  // { name: "Mark" }
+  
+  cy.updateFixtureProperty("fixture.json", "name", "Josef");
+  
+  // fixture.json
+  // { name: "Josef" }
+  ```
