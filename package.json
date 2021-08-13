@@ -6,7 +6,8 @@
   "author": "WojciechGrygoHTD, htd-tstepien",
   "scripts": {
     "delete:reportFolder": "rm -rf mochawesome-report/",
-    "merge:reports": "mochawesome-merge mochawesome-report/*.json -o cypress-combined-report.json"
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json -o cypress-combined-report.json",
+    "create:markdown:report": "npx mochawesome-json-to-md -p cypress-combined-report.json -o merged.md"
   },
   "dependencies": {
     "cypress": "^7.7.0",
