@@ -13,4 +13,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: npx
-      run: npx crlf --set=LF *
+      run: npx crlf --set=LF index.js
