@@ -10,5 +10,7 @@ jobs:
         uses: cypress-io/github-action@v2
       - name: Merge generated reports into one
         run: yarn run merge:reports
-      - name: Show directory
+      - name: Create md report
+        run: yarn run create:markdown:report
+      - name: List dir
         run: ls .
