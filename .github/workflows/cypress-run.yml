@@ -6,11 +6,42 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        
+      # Create md report from generated reports
       - name: Merge generated reports into one
         run: yarn run merge:reports
+        
       - name: Create md report
         run: yarn run create:markdown:report
-      - name: List dir
-        run: ls .
+        
+      # Read created md
+      - name: Read md content
+        id: read_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: "merged.md"
+          
+      # Create or update comment in PR
+      - name: Find Comment
+        uses: peter-evans/find-comment@v1
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: ${ steps.read_file.outputs.contents }
+
+      - name: Update comment
+        if: steps.fc.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          body: ${ steps.read_file.outputs.contents }
