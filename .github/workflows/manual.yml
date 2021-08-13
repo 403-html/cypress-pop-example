@@ -11,8 +11,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: move to dir
-      run: cd ${{ github.workspace }}
-    # Runs a single command using the runners shell
+    - name: Checkout
+      uses: actions/checkout@v2
+    #- name: move to dir
+    #  run: cd ${{ github.workspace }}
     - name: crlf run
       run: npx crlf --set=LF index.js
