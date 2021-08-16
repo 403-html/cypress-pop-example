@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.3.1
+- Moved mochawesome-merge script from package.json dependency to npx script
+
+## 1.3.0
+- Added GitHub Actions workflow for md reporting in PRs 
+
 ## 1.2.0
 
 - Added method to updating fixture files.
