@@ -50,8 +50,10 @@ Contains all assertions we are using in tests in project.
 - `cy.restoreLocalStorage()` - restore localStorage from an array in Cypress to the current browser session
 
   ## fixturesExtension.js
+
 - `cy.updateFixtureProperty(fixtureName, propName, newContent)`
-  - updates the value of the property in the given fixture to the given new content, **doesn't look for nested properties** 
+
+  - updates the value of the property in the given fixture to the given new content, **doesn't look for nested properties**
   - `fixturName` - `string`, defines which fixture should be updated
   - `propName` - `string`, defines which property value should be changed
   - `newContent` - `any`, defines a new value for the given property
@@ -60,9 +62,17 @@ Contains all assertions we are using in tests in project.
   ```js
   // fixture.json
   // { name: "Mark" }
-  
+
   cy.updateFixtureProperty("fixture.json", "name", "Josef");
-  
+
   // fixture.json
   // { name: "Josef" }
+  ```
+
+  ## typing.js
+
+  - `cy.type()` - got modified, can take now option of boolean `humanType` which will allow you to test typing with average 167ms type speed of normal person.
+
+  ```js
+  cy.get(input).type("text", { humanType: true });
   ```
