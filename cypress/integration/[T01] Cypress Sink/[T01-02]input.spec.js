@@ -34,7 +34,7 @@ describe("Checking fixture method", () => {
     });
   });
 
-  it("Sample input type", () => {
+  it("Standard input type", () => {
     cy.fixture("example.json").then(({ email }) => {
       actionsPage
         .selectSampleInput()
@@ -43,6 +43,19 @@ describe("Checking fixture method", () => {
           checkVisiblity(input);
         })
         .type(email)
+        .then((input) => checkIfValue(input, email));
+    });
+  });
+
+  it("Average user input type", () => {
+    cy.fixture("example.json").then(({ email }) => {
+      actionsPage
+        .selectSampleInput()
+        .then((input) => {
+          checkAmountOfElements(input, 1);
+          checkVisiblity(input);
+        })
+        .type(email, { humanType: true })
         .then((input) => checkIfValue(input, email));
     });
   });
